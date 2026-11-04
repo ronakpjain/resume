@@ -183,10 +183,10 @@
 \resumeProjectHeading
 {\href{https://github.com/ronakpjain/fil}{\uline{FIL}}}{July 2026 -- Present}
 \resumeItemListStart
-\resumeItem{Built FIL from scratch in C++20 to run real ARM ELF firmware at the instruction level on an emulated STM32G4/Cortex-M4F, modeling CPU exceptions and memory alongside DMA, timers, ADC, USART, and FDCAN.}
-\resumeItem{Connected six simulated boards over virtual CAN with deterministic scheduling and simulated-time events, enabling repeatable vehicle-network scenarios with live CAN frame injection and JSONL execution traces.}
-\resumeItem{Accelerated instruction-level firmware execution with caching, exact-state loop batching, and transactional parallel slices, achieving 1.37x real-time throughput on a 96M-instruction workload.}
-\resumeItem{Validated FIL with GoogleTest/CTest and sanitizers; used simulated-time event inputs, live CAN frame injection, and JSONL traces to reproduce and inspect firmware behavior across the six-board vehicle network.}
+\resumeItem{Engineered a C++20 instruction-level STM32G4/Cortex-M4F emulator capable of executing real ARM ELF firmware, implementing Thumb instruction decoding, exception handling, memory management, and register-level peripheral models.}
+\resumeItem{Developed a deterministic discrete-event simulation engine connecting six emulated microcontrollers over virtual CAN, supporting concurrent firmware execution, live CAN injection, and timestamped execution tracing.}
+\resumeItem{Implemented cross-platform JIT compilation targeting AArch64 and x86-64, alongside speculative execution, reversible memory transactions, and parallel scheduling to accelerate firmware simulation.}
+\resumeItem{Achieved 1.37$\times$ real-time simulation throughput across a 96M-instruction vehicle-network workload; validated execution correctness through differential testing, GoogleTest/CTest, and sanitizers.}
 \resumeItemListEnd
 
 \resumeProjectHeading
