@@ -164,11 +164,10 @@
 {\href{https://github.com/PurdueElectricRacing/monorepo}{\uline{Purdue Electric Racing}}}{September 2024 -- Present}
 \resumeItemListStart
 \resumeItem{Architected a CAN bootloader and DaqApp update workflow for six STM32G474 nodes with generated transports, CRC/vector validation, metadata commits, and reset-safe recovery.}
-\resumeItem{Automated firmware packaging with Python and Rust tooling to generate manifest-driven firmware archives, pad images, compute STM32 CRCs, and validate sizes, addresses, paths, and CAN IDs.}
 \resumeItem{Implemented STM32G4 HALs for flash, ADC, USB, SPI, and USART with DMA-backed transfers, input validation, and dedicated hardware test targets.}
 \resumeItem{Integrated firmware testing with CMake, GoogleTest/CTest, C23 shims, sanitizers, coverage, and GitHub Actions.}
 \resumeItem{Expanded the CAN library to support FDCAN, route and filter messages, and handle standard and extended identifiers.}
-\resumeItem{Configured a Yocto/KAS Raspberry Pi CM5 PREEMPT\_RT image with 1\,kHz timers and PPS support, then automated cached WIC builds in GitHub Actions.}
+\resumeItem{Configured a Yocto/KAS Raspberry Pi CM5 PREEMPT\_RT image with 1\,kHz timers and PPS support, and automated cached WIC builds in GitHub Actions.}
 \resumeItemListEnd
 
 % \resumeProjectHeading
@@ -192,10 +191,10 @@
 \resumeProjectHeading
 {\href{https://github.com/ronakpjain/ronfire}{\uline{Ronfire}}}{May 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Built an asynchronous Tokio-based Rust HTTP server with modular transport and static-file layers, serving plugin routes over Unix sockets at 4,100+ requests/sec and 1.65 GB/s on image workloads in benchmark testing.}
-\resumeItem{Refactored HTTP, transport, static-file, runtime, and plugin layers into feature-gated APIs; implemented compiled-in handlers with factory registration, configuration validation, and exact-route dispatch.}
-\resumeItem{Implemented a proxy plugin with host-restricted redirects, response-size limits, timeouts, TTL caching, and stale fallback.}
-\resumeItem{Hardened HTTP handling with bounded header reads and pipelined-request framing; supported byte-range and HEAD requests while containing static files within the document root against traversal and symlink escapes.}
+\resumeItem{Engineered an asynchronous HTTP server in Rust using Tokio and Unix domain sockets, achieving 4,100+ requests/sec and 1.65 GB/s throughput on benchmark workloads.}
+\resumeItem{Architected modular HTTP, transport, static-file, and plugin subsystems with trait-based interfaces, feature-gated compilation, configurable handler registration, and exact-route dispatch.}
+\resumeItem{Developed an HTTP reverse-proxy plugin with restricted redirects, bounded response sizes, request timeouts, concurrency-safe TTL caching, and stale-cache fallback.}
+\resumeItem{Implemented HTTP/1.1 persistent connections, pipelined request framing, byte-range and HEAD responses, and secure file serving with path traversal and symlink escape protection.}
 \resumeItemListEnd
 
 % \resumeProjectHeading
