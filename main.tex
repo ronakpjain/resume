@@ -68,12 +68,12 @@
   \item\small{#1}
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[5][0pt]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+      \textbf{#2} & #3 \\[#1]
+      \textit{\small#4} & \textit{\small #5} \\
+    \end{tabular*}\vspace{\dimexpr-7pt-#1\relax}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -134,7 +134,7 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
+\resumeSubheading[-2pt]
 {Software Engineering Intern}{May 2026 -- August 2026}
 {Tesla}{Palo Alto, CA}
 \resumeItemListStart
