@@ -142,7 +142,7 @@
 \resumeItem{Developed firmware for Arm Cortex-M33 and Cortex-A55 platforms, integrating FreeRTOS, Embedded Linux, Buildroot, CAN communication, and gRPC service interfaces.}
 \resumeItem{Orchestrated asynchronous Rust components with Tokio to coordinate concurrent charging-system operations.}
 \resumeItem{Streamlined firmware integration and delivery by automating builds and test execution through CI/CD and AI-assisted development workflows, improving reliability.}
-\resumeItem{Authored unit and processor-in-the-loop tests to validate firmware behavior before hardware deployment, reducing test setup time by approximately 30\%.}
+\resumeItem{Authored unit and processor-in-the-loop tests, cutting validation setup time by 30\%.}
 \resumeItemListEnd
 
 % \resumeSubheading
@@ -182,19 +182,22 @@
 \resumeProjectHeading
 {\href{https://github.com/ronakpjain/fil}{\uline{FIL}}}{July 2026 -- Present}
 \resumeItemListStart
-\resumeItem{Engineered a C++20 instruction-level STM32G4/Cortex-M4F emulator capable of executing real ARM ELF firmware, implementing Thumb instruction decoding, exception handling, memory management, and register-level peripheral models.}
-\resumeItem{Developed a deterministic discrete-event simulation engine connecting six emulated microcontrollers over virtual CAN, supporting concurrent firmware execution, live CAN injection, and timestamped execution tracing.}
-\resumeItem{Implemented cross-platform JIT compilation targeting AArch64 and x86-64, alongside speculative execution, reversible memory transactions, and parallel scheduling to accelerate firmware simulation.}
-\resumeItem{Achieved 1.37$\times$ real-time simulation throughput across a 96M-instruction vehicle-network workload; validated execution correctness through differential testing, GoogleTest/CTest, and sanitizers.}
+\resumeItem{Engineered a C++20 instruction-level STM32G4/Cortex-M4F emulator executing real ARM ELF firmware, modeling Thumb decoding, exceptions, memory, and clocked peripherals.}
+\resumeItem{Developed a deterministic discrete-event engine running six boards over virtual FDCAN, with live CAN injection, timestamped tracing, and parallel scheduler lanes.}
+\resumeItem{Implemented cross-platform AArch64/x86-64 JIT compilation, speculative execution, and reversible memory transactions, reaching 4.8$\times$ real-time on a 194M-instruction workload.}
+\resumeItem{Added a GDB remote-protocol server with breakpoints, watchpoints, flash programming, and semihosting.}
+\resumeItem{Validated with differential tests, GoogleTest/CTest, sanitizers, and comparison against ST-Link hardware.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\href{https://github.com/ronakpjain/roco}{\uline{Roco}}}{November 2026 -- Present}
 \resumeItemListStart
-\resumeItem{Designed a five-stage pipelined RV32I processor in SystemVerilog for a Lattice ECP5 FPGA, implementing branch prediction, data forwarding, traps, and control and status registers.}
-\resumeItem{Built a system-on-chip with instruction and data caches, an SDRAM controller, memory-mapped peripherals, and a CRC-checked UART bootloader.}
-\resumeItem{Validated the core and cached SoC in simulation against 41 RISC-V ISA tests each, and synthesized the design for ECP5 using Yosys.}
-\resumeItem{Developed a PCB and hardware architecture covering FPGA pin planning, SDRAM, USB debug, power sequencing, and USB-C power delivery.}
+\resumeItem{Designed a five-stage pipelined RV32IMA processor in SystemVerilog for a Lattice ECP5 FPGA, adding vector and atomic units, a bimodal predictor, forwarding, and CSR/trap logic.}
+\resumeItem{Implemented M/S/U privilege and Sv32 virtual memory with TLB-backed translation, a hardware page-table walker, trap delegation, and timer interrupts.}
+\resumeItem{Built a system-on-chip with write-back caches, an arbitrated SDRAM controller, memory-mapped peripherals, and a CRC-checked UART bootloader, routed at 72\,MHz.}
+\resumeItem{Wrote a from-scratch C++20 C compiler, assembler, and linker emitting RV32IMA binaries for the core.}
+\resumeItem{Validated the core and cached SoC with 118 RISC-V ISA tests and 1.4 CPI on warmed dependency loops.}
+\resumeItem{Designed a PCB that shares one USB-C connector through a hub between JTAG/UART and a synchronous FIFO bridge, adding a full-speed USB-A host port and power-isolated buses.}
 \resumeItemListEnd
 
 % \resumeProjectHeading
